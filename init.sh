@@ -8,6 +8,7 @@ exec 1>log.out 2>&1
 cd ~/work/contexts_of_omnivorousness
 
 R -f init.R
+mkdir output
 
 # Access to files created by this script
 chown -R ${USERNAME}:${GROUPNAME} ${HOME}

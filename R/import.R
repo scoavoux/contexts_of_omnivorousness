@@ -50,7 +50,8 @@ read_mama_data <- function(){
     mutate(sexe = factor(eayy_a1, levels = 1:2, labels = c("Man", "Woman")),
            age_cat = factor(eayy_a2a_rec, levels = 4:14, labels = c("24yo and less", "25-29yo", "30-34yo", "35-39yo", "40-44yo", "45-49yo", "50-54yo", "55-59yo", "60-64yo", "65-69yo", "70+yo")),
            education = factor(eayy_b18c, levels = 1:5, labels = c("Middle school and less", "Vocational training", "High school degree", "College", "Graduate")),
-           hh_income = factor(eayy_e2a_rec, levels = 3:13, labels = c("Less than 800€", "800-999€", "1000-1199€", "1200-1499€", "1500-1799€", "1800-1999€", "2000-2499€", "2500-2999€", "3000-3999€", "4000-5999€", "6000€ and more")))
-  
+           hh_income = factor(eayy_e2a_rec, levels = 3:13, labels = c("Less than 800€", "800-999€", "1000-1199€", "1200-1499€", "1500-1799€", "1800-1999€", "2000-2499€", "2500-2999€", "3000-3999€", "4000-5999€", "6000€ and more")),
+           music_intensity = factor(mama_q95, levels = 1:6, labels = c("Never", "A few minutes a day", "15 min to 1h a day", "1-2h a day", "2-3 hours a day", "More than 3h a day"))) 
+  attr(m, "data_name") <- "mama"
   return(m)
 }
